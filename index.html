@@ -1,193 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<link rel="stylesheet" type="text/css" href="style.css" />
+    <script>
+        var Clicks = 0 ;
+        function AddClick(){
+        Clicks = Clicks + 1;
+        document.getElementById('CountedClicks').innerHTML = Clicks + ' Likes';
+        }
+     </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div id="menu">
-<li><a href="#about">About Me</a></li>
-<li><a href="#photos">My Photos</a></li>
-<li><a href="#playlist">My Playlist</a></li>
-<li><a href="#like">Like</a></li>
-<li><a href="#qrcoder">QR code</a></li>
-<li><a href="#spa">Q&A</a></li>
-<li><a href="#contact">Contact Me</a></li>
-</div>
-		  
-<section id="about" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-about me
-<br/>
-<br/>
-<br/>
-</section>
+    <div id="navbar" class="navbar">
+        <ul>
+            <li><a href="#AboutMe">About Me</a></li>
+            <li><a href="#MyPhotos">My Photos</a></li>
+            <li><a href="#MyPlaylist">My Playlist</a></li>
+            <li><a href="#Like">Like</a></li>
+            <li><a href="#QRCode">QR Code</a></li>
+            <li><a href="#Q&A">Q&A</a></li>
+            <li><a href="#ContactMe">Contact Me</a></li>
+        </ul> 
+    </div>
 
-<section id="photos" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-my photos
-<br/>
-<br/>
-<br/>
-</section>
+    <div class="titles">
+        
+            <a name=AboutMe></a><h3>About Me</h3>
+            <hr style="width:100%;text-align:left;margin-left:0">
 
-<section id="playlist" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-my playlist
-<br/>
-<br/>
-<br/>
-</section>
+            <h4>I have a very fulfilling feeling about what I have been able to accomplish in my life so far. I want the absolute best for myself and those close to me. I often go above and beyond to help those around me succeed and be the best version of themselves that they can possibly be. 
 
-<section id="like" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-give me a like
-<br/>
-<br/>
-<br/>
-</section>
+                My life is a mixture of moments, some happy moments and others not so much, but regardless, these moments have made me the person that I am today and I don’t regret anything that had happen. I consider myself a strong, and a very determined person, I have dreams to fill the world and I am willing to do the necessary efforts to attain those dreams. My motivations I inherit from my family, more specifically my father that I love so much, I like to swim and never miss a workout at the gym. </h4>
+            <a name=MyPhotos></a><h3>My Photos</h3>
+            <hr style="width:100%;text-align:left;margin-left:0">
+            <center><img src=pic1.jpg width=800 height=533/></center>
+            <center><img src=pic2.jpg width=800 height=533/></center>
+            <center><img src=pic3.jpg width=800 height=533/></center>
+            <hr style="width:100%;text-align:left;margin-left:0">
+            
 
-<section id="qrcoder" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-scan my code
-<br/>
-<br/>
-<br/>
-</section>
+            <a name=MyPlaylist></a><h3>My Playlist</h3>
+            <hr style="width:100%;text-align:left;margin-left:0">
+            <center><iframe src="https://www.youtube.com/embed/TPCaWQQo11A" width=60% height=500></iframe></center>
+            <hr style="width:100%;text-align:left;margin-left:0">
 
-<section id="spa" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-ans
-<br/>
-<br/>
-<br/>
-</section>
-
-<section id="contact" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-contact me
-<br/>
-<br/>
-<br/>
-</section>
+            <a name=Like></a><h3>Like</h3>
+            <hr style="width:100%;text-align:left;margin-left:0">
+            <center><span id="CountedClicks">0 Likes</span><br>
+            <button style="background-color:rgb(213, 83, 83)" onclick="AddClick()">Like</button></center>
+            <hr style="width:100%;text-align:left;margin-left:0">
 
 
-<script type="text/javascript">
-$(function(){
-  $("#nav a").click(function(e){
-    e.preventDefault();
-    $('html,body').scrollTo(this.hash,this.hash); 
-  });
-});
-</script>
-<script type="text/javascript">
- $(document).scroll(function() {
-    $('#menu').toggle($(this).scrollTop()>1000)
- });​
- </script>
+            <a name=QRCode></a><h3>QR Code</h3>
+            <hr style="width:100%;text-align:left;margin-left:0">
+            <center><img src=QRHW1.png width=300 height=300/></center>
+            <hr style="width:100%;text-align:left;margin-left:0">
+
+            <a name=Q&A></a><h3>Q&A</h3>
+            <hr style="width:100%;text-align:left;margin-left:0">
+            <h4>Q1: Web1: Million of users Web2: Billions of users Web3: Trillions of users</h4>
+            <h4>Q2: In Web1 we might get less results for the query, however, in Web3 we will be able to get massive informantion probably on any side effects of every medicine.</h4>
+            
+            <hr style="width:100%;text-align:left;margin-left:0">
+
+            <a name=ContactMe></a><h3>Contact Me</h3>
+            <hr style="width:100%;text-align:left;margin-left:0">
+            <center><form action="razego99@gmail.com" method="post" enctype="text/plain">
+                Name:<br>
+                <input type="text" name="name"><br>
+                E-mail:<br>
+                <input type="text" name="mail"><br>
+                Comment:<br>
+                <input type="text" name="comment" size="50"><br><br>
+                <input type="submit" value="Send">
+                <input type="reset" value="Reset">
+            </form></center>
+            <hr style="width:100%;text-align:left;margin-left:0">
+
+    </div>
 </body>
 </html>
